@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+     background: black;
+}
+body html {
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+.big-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin: 70px;
+    align-items: center;
+    /* transform-style: preserve-3d; */
+}
+.container {
+  display: grid;
+}
+.content1 {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+    height: 200px;
+    width: 200px;
+    background: hsla(34, 100%, 50%, 1);
+    text-align: center;  
+}
+.overlay1 {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background: hsla(61, 100%, 50%, 1);
+    transition: all 5s ease-in-out; 
+}
+.overlay1:hover {
+     transform: skew(30deg, 40deg) translateX(30px);
+    background: transparent;
+    border: 2px solid hsla(61, 100%, 50%, 1);
+    color: transparent;
+}
+
+.content1, .overlay1 {
+  grid-area: 1 / 1;
+}
+.content2 {
+    display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 1em;
+ height: 200px;
+  width: 200px;
+  background: hsla(131, 100%, 38%, 1);
+   
+}
+.overlay2 {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 1em;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background: hsla(103, 100%, 23%, 1);
+    transition: all 8s ease; 
+}
+.overlay2:hover {
+     transform: perspective(200px) scaleZ(1.75) rotateX(45deg);
+     z-index: 1;
+}
+.content2, .overlay2 {
+  grid-area: 1 / 1;
+}
+.content3 {
+    display: flex;
+    writing-mode: vertical-rl;
+    padding-top: 5px;
+  font-size: 1em;
+    height: 200px;
+    width: 200px;
+    color: white;
+   background:  hsla(320, 100%, 37%, 1);
+}
+.overlay3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    font-size: 1em;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background: hsla(320, 100%, 22%, 1);
+    transition: all 5s ease-in-out; 
+}
+.overlay3:hover {
+ color: transparent;
+transform: rotateY(195deg);
+}
+
+.content3, .overlay3 {
+  grid-area: 1 / 1;
+}
+.content4 {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+    height: 200px;
+    width: 200px;
+    background:hsla(201, 91%, 49%, 1);
+    text-align: center;  
+    transition: all 4s ease-in-out; 
+}
+.overlay4 {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 1em;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background: hsla(214, 91%, 49%, 1);
+    transition: all 4s ease-in-out; 
+    transition-delay: 1s;
+}
+.overlay4:hover {
+   border-radius: 50%;
+   border: 25px solid yellow;
+ background: transparent;
+color: transparent;
+}
+.content4:hover {
+border-radius: 50%;
+color: yellow;
+}
+
+.content4, .overlay4 {
+  grid-area: 1 / 1;
+}
+
+
+.container5 {
+    display: grid;
+}
+@keyframes slide {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    left: 244px;
+    top: 100px;
+  }
+  100% {
+    left: 488px;
+    top: 0;
+  }
+}
+.container5 {
+  height: 200px;
+  width: 200px;
+  position: relative;
+}
+.overlay5 {
+    height: 200px;
+    position: absolute;
+    width: 200px;
+}
+.container5:hover .overlay5 {
+    color: transparent;
+    background: url(./assets/s8.png);
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+   animation-iteration-count: infinite;
+}
+.content5 {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+    height: 200px;
+    width: 200px;
+    background: hsla(10, 80%, 31%, 1);
+    text-align: center;  
+}
+.overlay5 {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background:hsla(10, 100%, 53%, 1);
+}
+.content5, .overlay5 {
+  grid-area: 1 / 1;
+}
+.content6 {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+    height: 200px;
+    width: 200px;
+    background:hsla(173, 98%, 64%, 1);
+    text-align: center;  
+}
+.overlay6 {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    color: transparent;
+    background: transparent;
+    transition: all 5s ease-in-out; 
+}
+.overlay6:hover {
+    transform: perspective(400px) scaleZ(1.25) rotateX(360deg);
+    background:hsla(173, 91%, 38%, 1);
+    color: black;
+}
+.content6, .overlay6 {
+  grid-area: 1 / 1;
+}
